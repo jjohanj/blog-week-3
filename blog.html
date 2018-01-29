@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <script src="script2.js"></script>
+ <link rel="stylesheet" type="text/css" href="style.css">
+ <title>Document</title>
+</head>
+<body>
+
+<div id="main">
+  <h2> Chatroom </h2>
+    <div id="demo"></div>
+
+    <input placeholder="name" name="titel" type="text" id="titel">
+    <input placeholder="message" name="body" type="text" id="body"></br>
+    <button type="button" onclick="message()">Write to database</button></br>
+
+</div>
+
+<script>
+function message () {
+  var y = document.getElementById("titel").value;
+  var x = document.getElementById("body").value;
+
+  var xhttp = new XMLHttpRequest();
+  xhttp.open("POST", "blog.php?body=" + x + "&titel=" + y, false);
+  xhttp.send();
+  clearField();
+}
+
+function clearField() {
+  document.getElementById("body").value = "";
+  document.getElementById("titel").value = "";
+}
+
+</script>
+</body>
+</html>
