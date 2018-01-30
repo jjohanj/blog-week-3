@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <script src="script2.js"></script>
+ <link rel="stylesheet" type="text/css" href="blogstyle.css">
+ <title>Document</title>
+</head>
+<body>
+<div id="main">
+  <h2>Enter Blog text</h2>
+  <div id="inputfield"></div>
+    <input placeholder="Titel" name="titel" type="text" id="titel"></br>
+    <textarea rows="30" cols="80" placeholder="Blog tekst" name="body" type="text" id="body"></textarea></br>
+    <button type="button" onclick="message()">Write to database and publish on website</button></br>
+</div>
+
+<script>
+function message () {
+  var y = document.getElementById("titel").value;
+  var x = document.getElementById("body").value;
+
+  var xhttp = new XMLHttpRequest();
+  xhttp.open("POST", "blog.php?body=" + x + "&titel=" + y, false);
+  xhttp.send();
+  clearField();
+}
+
+function clearField() {
+  document.getElementById("body").value = "";
+  document.getElementById("titel").value = "";
+}
+
+</script>
+</body>
+</html>
