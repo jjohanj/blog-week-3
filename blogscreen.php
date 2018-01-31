@@ -9,12 +9,13 @@
 </head>
 <body>
 
+<div id="container">
 <h2> Johan's Blog </h2>
 
 <div id="main">
 <?php
 try {
-    $conn = new PDO("mysql:host=127.0.0.1; dbname=blog", "root", "");
+    $conn = new PDO("mysql:host=localhost; dbname=blog", "root", "");
     // set the PDO error mode to exception
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $sql = "SELECT * FROM artikelen order by id desc limit 3";
@@ -26,6 +27,9 @@ try {
     echo "<div class='blogtext'>";
     echo $row['body'];
     echo "</div>";
+    echo "<div class='categorieoutput'>";
+    echo "Categorie: " . $row['categorie'];
+    echo "</div>";
     }
 }
 
@@ -35,7 +39,7 @@ catch(PDOException $e)
     }
 ?>
 </div>
-
+</div>
 
 
 

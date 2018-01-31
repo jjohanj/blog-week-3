@@ -3,7 +3,6 @@
 <html lang="en">
 <head>
  <meta charset="UTF-8">
- <script src="script2.js"></script>
  <link rel="stylesheet" type="text/css" href="blogstyle.css">
  <title>Document</title>
 </head>
@@ -12,7 +11,8 @@
   <h2>Enter Blog text</h2>
   <div id="inputfield"></div>
     <input placeholder="Titel" name="titel" type="text" id="titel"></br>
-    <textarea rows="30" cols="80" placeholder="Blog tekst" name="body" type="text" id="body"></textarea></br>
+    <input placeholder="Categorie" name="categorie" type="text" id="categorie"></br>
+    <textarea rows="30" placeholder="Blog tekst" name="body" type="text" id="body"></textarea></br>
     <button type="button" onclick="message()">Write to database and publish on website</button></br>
 </div>
 
@@ -20,9 +20,11 @@
 function message () {
   var y = document.getElementById("titel").value;
   var x = document.getElementById("body").value;
+  var z = document.getElementById("categorie").value;
+
 
   var xhttp = new XMLHttpRequest();
-  xhttp.open("POST", "blog.php?body=" + x + "&titel=" + y, false);
+  xhttp.open("POST", "blog.php?body=" + x + "&titel=" + y + "&categorie=" + z, false);
   xhttp.send();
   clearField();
 }
