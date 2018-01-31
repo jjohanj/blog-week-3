@@ -6,6 +6,9 @@ Eerste versie:
   -Input wordt weggeschreven naar database
 
 Tweede versie:
- -Pagina waarop de blogger de teksten kan invoeren, die worden weggeschreven naar database. 
-  Ingevoerd wordt een titel en de tekst.
- -Pagina voor de lezers waar de teksten uit de database worden gehaald en op de website verschijnen.
+ Pagina waarop de blogger de teksten kan invoeren, die worden weggeschreven naar database, ingevoerd wordt een titel en de tekst.
+ Pagina voor de lezers waar de teksten uit de database worden gehaald en op de website verschijnen.
+ 
+ Derde versie:
+ CSS styling toegevoegd. De blogger kan nu een categorie toegevoegen aan het artikel.
+
