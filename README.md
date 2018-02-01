@@ -11,4 +11,7 @@ Tweede versie:
  
  Derde versie:
  CSS styling toegevoegd. De blogger kan nu een categorie toegevoegen aan het artikel.
+ 
+ Vierde versie:
+ Categorie toekenning gewijzigd, lezer kan nu alle artikelen met een bepaalde categorie selecteren.
 
