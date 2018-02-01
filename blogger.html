@@ -11,7 +11,7 @@
   <h2>Enter Blog text</h2>
   <div id="inputfield"></div>
     <input placeholder="Titel" name="titel" type="text" id="titel"></br>
-    <input placeholder="Categorie" name="categorie" type="text" id="categorie"></br>
+    <input placeholder="Categorie: moet verslag of uitslag zijn" name="categorie" type="text" id="categorie"></br>
     <textarea rows="30" placeholder="Blog tekst" name="body" type="text" id="body"></textarea></br>
     <button type="button" onclick="message()">Write to database and publish on website</button></br>
 </div>
@@ -22,9 +22,16 @@ function message () {
   var x = document.getElementById("body").value;
   var z = document.getElementById("categorie").value;
 
+  if (z === "verslag") {
+    z = 1;
+  } else {
+    z = 2;
+  }
+
+console.log (z);
 
   var xhttp = new XMLHttpRequest();
-  xhttp.open("POST", "blog.php?body=" + x + "&titel=" + y + "&categorie=" + z, false);
+  xhttp.open("POST", "blog.php?body=" + x + "&titel=" + y + "&category_id=" + z, false);
   xhttp.send();
   clearField();
 }

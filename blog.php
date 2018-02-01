@@ -2,14 +2,14 @@
 
 $title = $_GET['titel'];
 $body = $_GET['body'];
-$categorie = $_GET['categorie'];
+$categorie = $_GET['category_id'];
 
 try {
     $conn = new PDO("mysql:host=127.0.0.1;dbname=blog", "root", "");
     // set the PDO error mode to exception
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    $sql = "INSERT INTO artikelen (titel, body, categorie)
+    $sql = "INSERT INTO artikelen (titel, body, category_id)
     VALUES ('$title', '$body', '$categorie')";
     $conn->exec($sql);
     $last_id = $conn->lastInsertId();
