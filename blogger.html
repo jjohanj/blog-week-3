@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,38 +8,16 @@
 <body>
 <div id="main">
   <h2>Enter Blog text</h2>
+
+<form action="blog.php" method="POST">
   <div id="inputfield"></div>
-    <input placeholder="Titel" name="titel" type="text" id="titel"></br>
-    <input placeholder="Categorie: moet verslag of uitslag zijn" name="categorie" type="text" id="categorie"></br>
-    <textarea rows="30" placeholder="Blog tekst" name="body" type="text" id="body"></textarea></br>
-    <button type="button" onclick="message()">Write to database and publish on website</button></br>
+    <input placeholder="Titel" name="titel" type="text" id="titel" required></br>
+    <input type="radio" name="category_id" value="1" checked> Verslag<br>
+    <input type="radio" name="category_id" value="2"> Uitslag<br>
+    <textarea rows="30" placeholder="Blog tekst" name="body" type="text" id="body" required></textarea></br>
+    <button type="submit">Write to database and publish on website</button></br>
 </div>
+</form>
 
-<script>
-function message () {
-  var y = document.getElementById("titel").value;
-  var x = document.getElementById("body").value;
-  var z = document.getElementById("categorie").value;
-
-  if (z === "verslag") {
-    z = 1;
-  } else {
-    z = 2;
-  }
-
-console.log (z);
-
-  var xhttp = new XMLHttpRequest();
-  xhttp.open("POST", "blog.php?body=" + x + "&titel=" + y + "&category_id=" + z, false);
-  xhttp.send();
-  clearField();
-}
-
-function clearField() {
-  document.getElementById("body").value = "";
-  document.getElementById("titel").value = "";
-}
-
-</script>
 </body>
 </html>

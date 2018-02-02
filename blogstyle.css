@@ -10,12 +10,21 @@ p {
 
 }
 
-input {
+#titel {
   width: 100%;
   height: auto;
+  border: 1px solid #97b498;
+  border-radius:5px;
+  margin-top: 4px;
+  margin-bottom:4px;
+  padding-top:4px;
+  padding-bottom: 4px;
+  font-size:18px;
 }
 
+
 textarea {
+  margin-top: 4px;
   width: 100%;
   height: auto;
 }
@@ -60,4 +69,18 @@ h2 {
 
 body {
   background-color: #c8e6c9;
+}
+
+
+button {
+  background-color: #97b498;
+  border: none;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 4px;
+  display: inline-block;
+  font-size: 12px;
+  cursor: pointer;
 }

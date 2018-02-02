@@ -17,10 +17,6 @@
   <button class="select" name='select' onclick=getMessage(2); >Uitslagen</button>
 </div>
 
-<div id="game">
-
-</div>
-
 <div id="main">
 <script>
   function getMessage(categorie){
@@ -59,5 +55,6 @@ catch(PDOException $e)
     echo "Connection failed: " . $e->getMessage();
     }
 ?>
+</div>
 </body>
 </html>

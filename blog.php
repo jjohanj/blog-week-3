@@ -1,8 +1,8 @@
 <?php
 
-$title = $_GET['titel'];
-$body = $_GET['body'];
-$categorie = $_GET['category_id'];
+$title = $_POST['titel'];
+$body = $_POST['body'];
+$categorie = $_POST['category_id'];
 
 try {
     $conn = new PDO("mysql:host=127.0.0.1;dbname=blog", "root", "");
@@ -15,6 +15,8 @@ try {
     $last_id = $conn->lastInsertId();
     echo "Connected successfully</br>";
     echo "New record created successfully. Last inserted ID is: " . $last_id;
+    echo "succesfull blog entry";
+    header('Location: http://localhost/blog/blogger.html');
     }
 
 
