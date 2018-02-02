@@ -14,4 +14,14 @@ Tweede versie:
  
  Vierde versie:
  Categorie toekenning gewijzigd, lezer kan nu alle artikelen met een bepaalde categorie selecteren.
+ 
+ Vijfde versie:
+ Styling verbeterd, data nu toevoegen via POST, database online aangemaakt en website online gezet.
+ 
+ Voor het bekijken van het blog: 
+ 
+ http://jjohanj.nl.transurl.nl/blog/blogscreen.php
 
+Voor het invoeren van blogposts:
+
+http://jjohanj.nl.transurl.nl/blog/blogger.html
